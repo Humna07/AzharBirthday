@@ -156,9 +156,9 @@
   <div class="heart" style="left: 80%; top: 80%; animation-delay: 4.5s;"></div>
   <div class="heart" style="left: 90%; top: 70%; animation-delay: 1.5s;"></div>
 
-   <audio id="backgroundMusic" loop>
+  <audio id="backgroundMusic" loop>
     <source src="music.mp3" type="audio/mp3">
-   
+    Your browser does not support the audio element.
   </audio>
 
   <header>
@@ -166,8 +166,10 @@
   </header>
 
   <div class="nav-buttons">
-   <button onclick="window.location.href='index.html'">Go Back</button>
+    <button onclick="window.location.href='d.html'">Go Back</button>
   </div>
+
+  <button class="music-button" onclick="playAudio()">Play Music</button>
 
   <div class="short-message-box" id="message1">
     <p>I lOVE YOU MY JAN 💕🙈😘</p>
@@ -181,7 +183,7 @@
     <p>Made with love by yours Humna 💕</p>
   </div>
 
-   <script>
+  <script>
     // Message Box Animation (your existing code)
     document.addEventListener('DOMContentLoaded', function() {
       const message1 = document.getElementById('message1');
@@ -198,7 +200,7 @@
       }, 2500);
     });
 
-    // New: JavaScript function to play the audio when the button is clicked
+    // IMPORTANT: NEW JAVASCRIPT FUNCTION TO PLAY THE AUDIO WHEN THE BUTTON IS CLICKED
     function playAudio() {
       const music = document.getElementById('backgroundMusic');
       if (music.paused) {

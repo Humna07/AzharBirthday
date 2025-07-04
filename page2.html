@@ -183,10 +183,9 @@
   </header>
 
   <div class="nav-buttons">
-    <button onclick="window.location.href='d.html'">Go Back</button>
+    <button 
+      onclick="window.location.href='d.html'">Go Back</button>
   </div>
-
-  <button class="music-button" onclick="playAudio()">Play Music</button>
 
   <div class="short-message-box" id="message1">
     <p>I lOVE YOU MY JAN 💕🙈😘</p>
@@ -216,16 +215,6 @@
         message2.style.transform = 'translateY(0)';
       }, 2500);
     });
-
-    // New: JavaScript function to play the audio when the button is clicked
-    function playAudio() {
-      const music = document.getElementById('backgroundMusic');
-      if (music.paused) {
-        music.play().catch(e => console.error("Error playing audio:", e));
-      } else {
-        music.pause(); // Allows toggling play/pause
-      }
-    }
   </script>
 </body>
 </html>

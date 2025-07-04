@@ -44,22 +44,21 @@
       transform: translateY(-2px);
     }
 
-    /* Styles for the message boxes (copied from your original) */
+    /* Styles for the message boxes */
     .short-message-box, .special-message-box {
       max-width: 600px;
       margin: 30px auto;
-      background: rgba(255, 255, 255, 0.9); /* Default background, can be overridden */
+      background: rgba(255, 255, 255, 0.9);
       padding: 25px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      opacity: 0; /* Initially hidden */
-      transform: translateY(20px); /* Initially offset */
-      transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition for appearance */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     }
 
     .short-message-box {
-      max-width: 300px; /* Kept max-width as provided */
-      /* Changed background color to a very light red */
+      max-width: 300px;
       background: rgba(255, 220, 220, 0.9);
       padding: 20px;
       border-radius: 15px;
@@ -68,9 +67,8 @@
 
     .short-message-box p {
       font-size: 1.15em;
-      /* Changed text color to a vibrant red */
-      color: #FF0000; /* Pure Red */
-      margin-bottom: 1; /* Changed from 1 to 0 for standard CSS units */
+      color: #FF0000;
+      margin-bottom: 0;
     }
 
     .special-message-box {
@@ -91,19 +89,19 @@
       margin: 40px 0;
       font-size: 0.9em;
       color: #555;
-      animation: fadeIn 2s ease-in-out 2s; /* This will start animation once page loads */
+      animation: fadeIn 2s ease-in-out 2s;
     }
 
-    /* Heart Decorations CSS (ADDED to main style block in head) */
+    /* Heart Decorations CSS */
     .heart {
       position: absolute;
       width: 30px;
       height: 30px;
-      background-color: #FF69B4; /* Hot Pink */
+      background-color: #FF69B4;
       transform: rotate(-45deg);
       animation: floatUp 6s infinite ease-in-out;
       opacity: 0;
-      z-index: -1; /* Place hearts behind content */
+      z-index: -1;
     }
 
     .heart:before,
@@ -112,7 +110,7 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      background-color: #FF69B4; /* Hot Pink */
+      background-color: #FF69B4;
       border-radius: 50%;
     }
 
@@ -142,6 +140,23 @@
         transform: translateY(-500px) rotate(-45deg);
         opacity: 0;
       }
+    }
+
+    /* Style for the Play Music button */
+    .music-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .music-button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>

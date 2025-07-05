@@ -1,6 +1,4 @@
-      
-      
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -96,7 +94,7 @@
       animation: fadeIn 2s ease-in-out 2s; /* This will start animation once page loads */
     }
 
-    /* Heart Decorations CSS */
+    /* Heart Decorations CSS (ADDED to main style block in head) */
     .heart {
       position: absolute;
       width: 30px;
@@ -145,23 +143,6 @@
         opacity: 0;
       }
     }
-
-    /* Style for the Play Music button */
-    .music-button {
-      background-color: #4CAF50; /* Green */
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    .music-button:hover {
-      background-color: #45a049;
-    }
   </style>
 </head>
 <body>
@@ -175,7 +156,7 @@
   <div class="heart" style="left: 80%; top: 80%; animation-delay: 4.5s;"></div>
   <div class="heart" style="left: 90%; top: 70%; animation-delay: 1.5s;"></div>
 
-  <audio id="backgroundMusic" loop>
+  <audio autoplay loop>
     <source src="music.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -187,8 +168,6 @@
   <div class="nav-buttons">
     <button onclick="window.location.href='d.html'">Go Back</button>
   </div>
-
-  <button class="music-button" onclick="playAudio()">Play Music</button>
 
   <div class="short-message-box" id="message1">
     <p>I lOVE YOU MY JAN 💕🙈😘</p>
@@ -203,23 +182,22 @@
   </div>
 
   <script>
-    // Message Box Animation
     document.addEventListener('DOMContentLoaded', function() {
       const message1 = document.getElementById('message1');
       const message2 = document.getElementById('message2');
 
+      // Show the first message immediately
       setTimeout(() => {
         message1.style.opacity = '1';
         message1.style.transform = 'translateY(0)';
-      }, 500);
+      }, 500); // Appear 0.5 seconds after page load
 
+      // Show the second message after a delay from the first
       setTimeout(() => {
         message2.style.opacity = '1';
         message2.style.transform = 'translateY(0)';
-      }, 2500);
+      }, 2500); // Appear 2.5 seconds after page load (2 seconds after first message starts appearing)
     });
-
-    // JavaScript function to play the audio when the button is cli
   </script>
 </body>
 </html>
